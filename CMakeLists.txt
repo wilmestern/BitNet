@@ -20,6 +20,8 @@ if (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|AMD64")
     set(BITNET_X86_TL2 ON CACHE BOOL "bitnet.cpp: use tl2 on x86 platform" FORCE)
 endif()
 
+# Use C++17 for better standard library support (upstream uses no explicit standard)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED true)
