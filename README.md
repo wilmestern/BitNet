@@ -31,9 +31,9 @@ https://github.com/user-attachments/assets/7f46b736-edec-4828-b809-4be780a3e5b1
 >   -p "What is the capital of France?" -n 128 -t $(nproc)
 > ```
 > The `-t $(nproc)` flag to use all available threads made a noticeable difference in tokens/sec on my 16-core machine.
+>
+> **Tested context lengths:** I've found `-c 2048` to be a sweet spot for my 32GB RAM machine — going higher (4096+) noticeably increases memory usage without much practical benefit for my use cases. If you have 64GB+ RAM, `-c 4096` should be fine.
 
 ## What's New:
 - 01/15/2026 [BitNet CPU Inference Optimization](https://github.com/microsoft/BitNet/blob/main/src/README.md) ![NEW](https://img.shields.io/badge/NEW-red)
-- 05/20/2025 [BitNet Official GPU inference kernel](https://github.com/microsoft/BitNet/blob/main/gpu/README.md)
-- 04/14/2025 [BitNet Official 2B Parameter Model on Hugging Face](https://huggingface.co/microsoft/BitNet-b1.58-2B-4T)
-- 02/18/2025 [Bitnet.cpp: Efficient Edge Inference for Ternary LLMs](https://arxiv.or
+- 0
