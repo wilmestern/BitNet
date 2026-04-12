@@ -3,7 +3,7 @@
 ## Security
 
 Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet)
-> **(Personal Fork Note:** This is a personal fork of [/BitNet](https://github. for learning and experimentation. For any security in this fork, please open private issue or contact me directly. For issues in the upstream project, please follow the Microsoft reporting process below.
+ security issues found in, please open a private issue or contact project, please follow the Microsoft reporting process below.**)**
 
 ## Reporting Security Issues
 
@@ -13,7 +13,7 @@ Instead, please report them to the Microsoft Security Response Center (MSRC) at 
 
 If you prefer to submit without logging in, send email to [secure@microsoft.com](mailto:secure@microsoft.com).  If possible, encrypt your message with our PGP key; please download it from the [Microsoft Security Response Center PGP Key page](https://aka.ms/security.md/msrc/pgp).
 
-You should receive a response 24 hours. If for some, please follow up More information can be found at [microsoft..
+You should receive a response within 24 hours. If for some you do not, to ensure we received message. More information can be found at [microsoft.rc](https://www.
 
 ease include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
 
