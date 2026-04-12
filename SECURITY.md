@@ -2,21 +2,26 @@
 
 ## Security
 
-Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https issues found in, please open a private
+Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet)Xamarin](https://github.com/xamarin).
 
-## Reporting Security report them to the Microsoft Security Response Center (MSRC) at [https://msrc.microsoft.com/create-report](https://aka.ms/security.md/msrc/create-report).
+If you believe you have found a security vulnerability in any-owned repository that meets [Microsoft's definition/definition described below.
+
+##
+
+Please do not report security vulnerabilities through public GitHub issues.
+
+Instead, please report them to the Microsoft Security Response Center (MSRC) at [https://msrc.microsoft.com/create-report](https://aka.ms/security.md/msrc/create-report).
 
 If you prefer to submit without logging in, send email to [secure@microsoft.com](mailto:secure@microsoft.com).  If possible, encrypt your message with our PGP key; please download it from the [Microsoft Security Response Center PGP Key page](https://aka.ms/security.md/msrc/pgp).
 
-You should receive a response some reason follow via email to ensure we received your message. Response Center](https://www.microsoft-us/ms.
+You should receive a response within some reason you do not, please follow up via email to ensure we received your original message. information can be found at [microsoft://www.microsoft.com/msrc).
 
-Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
+Please include the requested you can provide) to help us better understand the nature and scope of the possible issue:
 
-  * Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
-  * Full paths of source file(s) related to the manifestation of the issue
+  * Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, related to the manifestation of the issue
   * The location of the affected source code (tag/branch/commit or direct URL)
   * Any special configuration required to reproduce the issue
-  * Step-by-step instructions to reproduce the issue
+ instructions to reproduce the issue
   * Proof-of-concept or exploit code (if possible)
   * Impact of the issue, including how an attacker might exploit the issue
 
