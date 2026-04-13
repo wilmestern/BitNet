@@ -44,6 +44,14 @@ if (CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     add_compile_options(-fpermissive)
 endif()
 
+# Enable more warnings in Debug builds to catch issues during development
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    if (CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR
+        CMAKE_C_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+        add_compile_options(-Wall -Wextra -Wno-unused-parameter)
+    endif()
+endif()
+
 find_package(Threads REQUIRED)
 
 add_subdirectory(src)
@@ -79,8 +87,4 @@ write_basic_package_version_file(
     VERSION ${LLAMA_INSTALL_VERSION}
     COMPATIBILITY SameMajorVersion)
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/LlamaConfig.cmake
-              ${CMAKE_CURRENT_BINARY_DIR}/LlamaConfigVersion.cmake
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Llama)
-
-set_target_properties(llama PROPERTIES PUBLIC_HEADER ${CMAKE_CURREN
+install(FILES ${CMAKE_CURRENT_BINARY
