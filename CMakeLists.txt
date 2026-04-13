@@ -38,6 +38,8 @@ if (GGML_BITNET_X86_TL2)
     add_compile_definitions(GGML_BITNET_X86_TL2)
 endif()
 
+# Note: -fpermissive silences errors about non-conforming code in some ggml sources.
+# Ideally these would be fixed upstream rather than suppressed here.
 if (CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     add_compile_options(-fpermissive)
 endif()
@@ -45,6 +47,7 @@ endif()
 find_package(Threads REQUIRED)
 
 add_subdirectory(src)
+# Build the llama.cpp server so I can test inference via HTTP
 set(LLAMA_BUILD_SERVER ON CACHE BOOL "Build llama.cpp server" FORCE)
 add_subdirectory(3rdparty/llama.cpp)
 
@@ -80,5 +83,4 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/LlamaConfig.cmake
               ${CMAKE_CURRENT_BINARY_DIR}/LlamaConfigVersion.cmake
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Llama)
 
-set_target_properties(llama PROPERTIES PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/llama.h)
-install(TARGETS llama LIBRARY PUBLIC_HEADER)
+set_target_properties(llama PROPERTIES PUBLIC_HEADER ${CMAKE_CURREN
