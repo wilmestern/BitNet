@@ -52,6 +52,16 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     endif()
 endif()
 
+# Print a summary of the key build options so I don't forget what's enabled
+message(STATUS "")
+message(STATUS "=== BitNet Build Configuration ===")
+message(STATUS "  Build type:      ${CMAKE_BUILD_TYPE}")
+message(STATUS "  ARM TL1:         ${BITNET_ARM_TL1}")
+message(STATUS "  x86 TL2:         ${BITNET_X86_TL2}")
+message(STATUS "  C++ standard:    ${CMAKE_CXX_STANDARD}")
+message(STATUS "===================================")
+message(STATUS "")
+
 find_package(Threads REQUIRED)
 
 add_subdirectory(src)
@@ -77,14 +87,4 @@ set(LLAMA_INSTALL_VERSION 0.0.${BUILD_NUMBER})
 get_target_property(GGML_DIRECTORY ggml SOURCE_DIR)
 get_directory_property(GGML_DIR_DEFINES DIRECTORY ${GGML_DIRECTORY} COMPILE_DEFINITIONS)
 get_target_property(GGML_TARGET_DEFINES ggml COMPILE_DEFINITIONS)
-set(GGML_TRANSIENT_DEFINES ${GGML_TARGET_DEFINES} ${GGML_DIR_DEFINES})
-get_target_property(GGML_LINK_LIBRARIES ggml LINK_LIBRARIES)
-
-get_directory_property(LLAMA_TRANSIENT_DEFINES COMPILE_DEFINITIONS)
-
-write_basic_package_version_file(
-        ${CMAKE_CURRENT_BINARY_DIR}/LlamaConfigVersion.cmake
-    VERSION ${LLAMA_INSTALL_VERSION}
-    COMPATIBILITY SameMajorVersion)
-
-install(FILES ${CMAKE_CURRENT_BINARY
+set(GGML_TRANSIENT_DEFINES ${GGML_
